@@ -1,0 +1,257 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love</title>
+
+<style>
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+section{
+padding:60px 20px;
+}
+
+h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:32px;
+}
+
+p{
+max-width:700px;
+margin:auto;
+font-size:20px;
+line-height:1.6;
+}
+
+.hero img{
+width:220px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
+}
+
+button{
+padding:14px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#ffe5ec;
+}
+
+#surprise{
+display:none;
+font-size:26px;
+margin-top:20px;
+}
+
+.countdown{
+font-size:28px;
+margin-top:15px;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+color:white;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10px)}
+100%{transform:translateY(100vh)}
+}
+
+footer{
+padding:30px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<h1>Happy Birthday My Love ❤️</h1>
+<p>Today is special because the most beautiful person in my life was born today.</p>
+
+<img src="images/photo1.jpg" alt="Her Photo">
+</section>
+
+<section>
+<h2>My Message For You</h2>
+<p>
+
+Hey V,
+
+Your idiot tried creating something for u. I hope you like it.
+
+Many more happy returns of the day baacha ❤️
+
+I don’t even know where to start.
+
+Maybe from the day we planned for a movie and then cancelled it… hahaha as usual.
+
+And then finally you said,
+“Chalo ab toh chalte hai movie…”
+
+1 November 2024 — Singham Returns.
+
+Bas wahi se sab start hua.
+
+Aur haan English wala suffer nahi pagal,
+Hindi wala suffer 😄
+
+It has been such a beautiful time.
+
+I don’t know how long I will be in your life
+or how long you will be in mine…
+
+But one thing will always stay constant —
+our love ❤️
+
+From movies to trips to bunking classes
+to spending time at PG in Gurgaon.
+
+Cooking together, laughing, relaxing…
+Those memories will always be special.
+
+Now long distance…
+
+It hasn’t been easy.
+There were fights and misunderstandings.
+
+But I’m still giving my best
+because all I want is to see you happy.
+
+According to you it's just 1 year 4–5 months.
+But for me it feels like a lifetime of memories.
+
+And honestly,
+I want to spend my whole life with you.
+
+Happy Birthday Baacha ❤️
+Love you forever 🤍🌷
+
+</p>
+</section>
+
+<section>
+<h2>Our Beautiful Memories</h2>
+
+<div class="gallery">
+<img src="images/photo2.jpg">
+<img src="images/photo3.jpg">
+<img src="images/photo4.jpg">
+<img src="images/photo5.jpg">
+</div>
+
+</section>
+
+
+<section style="text-align:center; padding:60px;">
+
+<h2>Click To Open My Heart ❤️</h2>
+
+<button onclick="openHeart()" 
+style="padding:15px 30px; font-size:18px; border:none; border-radius:30px; background:white; color:#ff4d6d; cursor:pointer;">
+Open My Heart
+</button>
+
+<br><br>
+
+<img id="loveImage" src="images/photo7.jpg" 
+style="display:none; width:300px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.4);">
+
+<p id="loveText" style="display:none; font-size:22px; margin-top:20px; max-width:600px; margin:auto;">
+Happy Birthday Baacha ❤️<br><br>
+I love you more than words can explain.<br>
+Thank you for being the most beautiful part of my life.
+</p>
+
+</section>
+
+<footer>
+Made with love for you
+</footer>
+
+<script>
+
+function showLove(){
+document.getElementById("surprise").style.display="block";
+}
+
+// Floating hearts
+function createHeart(){
+
+const heart = document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML = "\u2764";
+heart.style.left = Math.random()*100 + "vw";
+heart.style.fontSize = (Math.random()*20+10)+"px";
+
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+<script>
+
+function openHeart(){
+
+document.getElementById("loveImage").style.display="block";
+
+setTimeout(function(){
+
+document.getElementById("loveText").style.display="block";
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>
